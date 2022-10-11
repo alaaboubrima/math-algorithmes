@@ -35,18 +35,19 @@ function dividedDiff(arr) {
   + space2 
   + delta2(arr[0],arr[1],arr[2]).toFixed(6) 
   + space.repeat(2));
+  if(!isNaN(arr[2][0])) {
   console.log("   |          | "
   + delta1(arr[1],arr[2]).toFixed(6) 
   + space2.repeat(1) 
   + delta3(arr[0],arr[1],arr[2],arr[3]).toFixed(6) 
   + " |")
-
   console.log("x2 | " 
   + arr[2][1].toFixed(6) 
   + space2 
   + delta2(arr[1],arr[2],arr[3]).toFixed(6) 
   + space2.repeat(1) 
   + delta4(arr[0],arr[1],arr[2],arr[3],arr[4]).toFixed(6));
+  if(!isNaN(arr[3][0])) {
   console.log("   |          | " 
   + delta1(arr[2],arr[3]).toFixed(6) 
   + space2.repeat(1) 
@@ -57,14 +58,17 @@ function dividedDiff(arr) {
   + space2 
   + delta2(arr[2],arr[3],arr[4]).toFixed(6) 
   + space.repeat(2));
+  if(!isNaN(arr[4][0])) {
   console.log("   |          | " 
   + delta1(arr[2],arr[3]).toFixed(6) 
   + space.repeat(3))
-
   console.log("x4 | " 
   + arr[4][1].toFixed(6) 
   + " | ");
   console.log("--------------------------------")
+  }
+  }
+  }
 
 }
 
