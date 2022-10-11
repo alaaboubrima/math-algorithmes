@@ -2,8 +2,6 @@
 <script>
 
 
-
-// Setup
 function dividedDiff(arr) {
   function delta1(x0, x1) {
 	  return (x1[1] - x0[1]) / (x1[0] - x0[0])
@@ -20,29 +18,51 @@ function dividedDiff(arr) {
   let space = " |         "
   let space2 = " |          | "
 
-  console.log("           f[x0,x1] |           f[x0,x1,x2] |")
+  console.log("   | f[xi, xj]| f[xi..xk]| f[xi..xl]| f[xi..xm]| f[xi..xn]")
 
-  console.log("x0 | " + arr[0][1].toFixed(6) + space.repeat(4));
-  console.log("   |           | " + delta1(arr[0],arr[1]).toFixed(6) + space.repeat(3))
+  console.log("x0 | " 
+  + arr[0][1].toFixed(6) 
+  + space.repeat(4));
+  console.log("   |          | " 
+  + delta1(arr[0],arr[1]).toFixed(6) 
+  + space.repeat(3))
   
-  console.log("x1 | " + arr[1][1].toFixed(6) + space2 + delta2(arr[0],arr[1],arr[2]).toFixed(6) + space.repeat(2));
-  console.log("   |           | " + delta1(arr[1],arr[2]).toFixed(6) + space2.repeat(1) + delta3(arr[0],arr[1],arr[2],arr[3]).toFixed(6) + "|")
+  console.log("x1 | " 
+  + arr[1][1].toFixed(6) 
+  + space2 
+  + delta2(arr[0],arr[1],arr[2]).toFixed(6) 
+  + space.repeat(2));
+  console.log("   |          | "
+  + delta1(arr[1],arr[2]).toFixed(6) 
+  + space2.repeat(1) 
+  + delta3(arr[0],arr[1],arr[2],arr[3]).toFixed(6) 
+  + " |")
 
-  console.log("x2 | " + arr[2][1].toFixed(6) + space2 + delta2(arr[1],arr[2],arr[3]).toFixed(6) + space.repeat(2) + delta4(arr[0],arr[1],arr[2],arr[3],arr[4]).toFixed(6));
-  console.log("   |           | " + delta1(arr[2],arr[3]).toFixed(6) + space.repeat(3) )
+  console.log("x2 | " 
+  + arr[2][1].toFixed(6) 
+  + space2 
+  + delta2(arr[1],arr[2],arr[3]).toFixed(6) 
+  + space2.repeat(1) 
+  + delta4(arr[0],arr[1],arr[2],arr[3],arr[4]).toFixed(6));
+  console.log("   |          | " 
+  + delta1(arr[2],arr[3]).toFixed(6) 
+  + space2.repeat(1) 
+  + delta3(arr[1],arr[2],arr[3],arr[4]).toFixed(6)
+  + " |")
+  console.log("x3 | " 
+  + arr[3][1].toFixed(6) 
+  + space2 
+  + delta2(arr[2],arr[3],arr[4]).toFixed(6) 
+  + space.repeat(2));
+  console.log("   |          | " 
+  + delta1(arr[2],arr[3]).toFixed(6) 
+  + space.repeat(3))
 
-  console.log("x3 | " + arr[3][1].toFixed(6) + " | ");
-  console.log("   |           | " + delta1(arr[2],arr[3]).toFixed(6) + space.repeat(3))
-
-  console.log("x4 | " + arr[4][1].toFixed(6) + " | ");
+  console.log("x4 | " 
+  + arr[4][1].toFixed(6) 
+  + " | ");
   console.log("--------------------------------")
 
-  console.log("f[x1,x2,x3] = " + delta2(arr[1],arr[2],arr[3]).toFixed(6) + " | ");
-  console.log("f[x0,x1,x2,x3] = " + delta3(arr[0],arr[1],arr[2],arr[3]).toFixed(6) + " | ");
-  console.log("--------------------------------")
-  console.log("f[x1,x2,x3] = " + delta2(arr[1],arr[2],arr[3]).toFixed(6) + " | ");
-  console.log("f[x0,x1,x2,x3] = " + delta3(arr[0],arr[1],arr[2],arr[3]).toFixed(6) + " | ");
-  console.log("--------------------------------")
 
   
 
@@ -50,14 +70,13 @@ function dividedDiff(arr) {
 }
 
 const array = [
-  [8.1,	16.9446],
-  [8.3,	17.56492],
-  [8.3,	17.56492],
-  [8.3,	17.56492],
-  [8.3,	17.56492]
+  [1,	2],
+  [2,	3],
+  [3,	4],
+  [4,	5],
+  [5,	6]
 ]
 console.log(dividedDiff(array));
-// Only change code below this line
 
 
 
