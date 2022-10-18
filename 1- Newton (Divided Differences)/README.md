@@ -1,2 +1,2 @@
-# 
+# Newton Divided Differences
 
