@@ -21,7 +21,6 @@ function dividedDiff(arr, x) {
 	if (typeof(arr[1])==='undefined') {arr[1] = [NaN, NaN];arr[2] = [NaN, NaN];arr[3] = [NaN, NaN];arr[4] = [NaN, NaN];{
   console.log(`
 P0(x) = ${arr[0][1]} + (x - ${arr[0][0]}) 
-
 	`);
 	console.log("P("+x+") = "+(arr[0][1] + (x - arr[0][0]) ))
 	}
@@ -29,7 +28,6 @@ P0(x) = ${arr[0][1]} + (x - ${arr[0][0]})
   else if (typeof(arr[2])==='undefined') {arr[2] = [NaN, NaN];arr[3] = [NaN, NaN];arr[4] = [NaN, NaN];
   console.log(`
 P1(x) = ${arr[0][1]} + (x - ${arr[0][0]}) ${delta1(arr[0],arr[1]).toFixed(2)} 
-
 	`);
 	console.log("P("+x+") = "+(arr[0][1] + (x - arr[0][0]) * delta1(arr[0],arr[1]).toFixed(2)))
 	}
@@ -37,7 +35,6 @@ P1(x) = ${arr[0][1]} + (x - ${arr[0][0]}) ${delta1(arr[0],arr[1]).toFixed(2)}
   console.log(`
 P2(x) = ${arr[0][1]} + (x - ${arr[0][0]}) ${delta1(arr[0],arr[1]).toFixed(2)} 
 		+ (x - ${arr[0][0]}) (x - ${arr[1][0]}) ${delta2(arr[0],arr[1],arr[2]).toFixed(2)}
-
 	`);
 	console.log("P("+x+") = "+((arr[0][1] + (x - arr[0][0]) * delta1(arr[0],arr[1]).toFixed(2))
 		+( (x - arr[0][0]) * (x - arr[1][0]) * delta2(arr[0],arr[1],arr[2]).toFixed(2))))
@@ -47,7 +44,6 @@ P2(x) = ${arr[0][1]} + (x - ${arr[0][0]}) ${delta1(arr[0],arr[1]).toFixed(2)}
 P3(x) = ${arr[0][1]} + (x - ${arr[0][0]}) ${delta1(arr[0],arr[1]).toFixed(2)} 
 		+ (x - ${arr[0][0]}) (x - ${arr[1][0]}) ${delta2(arr[0],arr[1],arr[2]).toFixed(2)}
 		+ (x - ${arr[0][0]}) (x - ${arr[1][0]}) (x - ${arr[2][0]}) ${delta3(arr[0],arr[1],arr[2],arr[3]).toFixed(2)}
-
 	`);
 	console.log("P("+x+") = "+((arr[0][1] + (x - arr[0][0]) * delta1(arr[0],arr[1]).toFixed(2)) 
 		+( (x - arr[0][0]) * (x - arr[1][0]) * delta2(arr[0],arr[1],arr[2]).toFixed(2))
@@ -59,19 +55,16 @@ P4(x) = ${arr[0][1]} + (x - ${arr[0][0]}) ${delta1(arr[0],arr[1]).toFixed(2)}
 		+ (x - ${arr[0][0]}) (x - ${arr[1][0]}) ${delta2(arr[0],arr[1],arr[2]).toFixed(2)}
 		+ (x - ${arr[0][0]}) (x - ${arr[1][0]}) (x - ${arr[2][0]}) ${delta3(arr[0],arr[1],arr[2],arr[3]).toFixed(2)}
 		+ (x - ${arr[0][0]}) (x - ${arr[1][0]}) (x - ${arr[2][0]}) (x - ${arr[3][0]}) ${delta4(arr[0],arr[1],arr[2],arr[3],arr[4]).toFixed(2)}
-
 	`);
 	console.log("P("+x+") = "+((arr[0][1] + (x - arr[0][0]) * delta1(arr[0],arr[1]).toFixed(2))
 		+( (x - arr[0][0]) * (x - arr[1][0]) * delta2(arr[0],arr[1],arr[2]).toFixed(2))
 		+( (x - arr[0][0]) * (x - arr[1][0]) * (x - arr[2][0]) * delta3(arr[0],arr[1],arr[2],arr[3]).toFixed(2))
 		+( (x - arr[0][0]) * (x - arr[1][0]) * (x - arr[2][0]) * (x - arr[3][0]) * delta4(arr[0],arr[1],arr[2],arr[3],arr[4]).toFixed(2))))
 	}
-	
-	
-	
-	
-	
 
+
+	
+// this is the main function
 	
 	
   function delta1(x0, x1) {
@@ -88,10 +81,9 @@ P4(x) = ${arr[0][1]} + (x - ${arr[0][0]}) ${delta1(arr[0],arr[1]).toFixed(2)}
   }
   
   
+// this is just for printing the results on the console
   
   
-  
-
   let space = " |         "
   let space2 = " |          | "
 
